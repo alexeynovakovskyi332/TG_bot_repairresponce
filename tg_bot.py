@@ -9,9 +9,15 @@ from aiogram.filters import CommandStart
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+GROUP_ID = int(os.getenv("GROUP_ID"))
+
 # ================== НАСТРОЙКИ ==================
-BOT_TOKEN = "8543460982:AAGglSJRhPZJul6mwUCriXfo0I_sMJF2uK8"
-GROUP_ID = -1003874589079
 
 bot = Bot(BOT_TOKEN)
 dp = Dispatcher()
