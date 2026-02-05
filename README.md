@@ -6,10 +6,10 @@
 
 Открываем терминал в папке с ботом и прописываем команды:
 Ubuntu обычно идёт с Python 3, но лучше убедиться:
-sudo apt update
+sudo apt update 
 sudo apt install python3 python3-venv python3-pip -y
 
-потом проверяем версию: 
+потом проверяем версию:
 python3 --version
 
 Создаём виртуальное окружение:
@@ -20,6 +20,7 @@ source venv/bin/activate
 
 Устанавливаем зависимости:
 pip install --upgrade pip
+
 pip install -r requirements.txt
 
 Запуск бота:
@@ -29,7 +30,9 @@ python3 tg_bot.py
 На сервере Ubuntu можно использовать screen или tmux:
 
 sudo apt install screen
+
 screen -S mybot
+
 python3 tg_bot.py
 
 Для выхода из сессии Ctrl+A D (бот будет работать в фоне)
